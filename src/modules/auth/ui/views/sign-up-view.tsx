@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import { FaGithub, FaGoogle } from "react-icons/fa"
 
@@ -226,8 +227,9 @@ export const SignUpView = () => {
                         </form>
                     </Form>
 
-                    <div className="bg-radial from-green-700 to-green-900 relative hidden md:flex flex-col gap-y-4 items-center justify-center">
-                        <img src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
+                    <div className="bg-radial from-sidebar-accent to-sidebar relative hidden md:flex flex-col gap-y-4 items-center justify-center">
+                        {/* <img src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" /> */}
+                        <Image src="/logo.svg" alt="NeuroMeet Logo" width={92} height={92} className="h-[92px] w-[92px]" priority />
                         <p className="text-2xl font-semibold text-white">
                             NeuroMeet
                         </p>
