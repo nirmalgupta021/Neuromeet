@@ -21,11 +21,11 @@ const Page = async ({ searchParams }: Props) => {
 
     const session = await auth.api.getSession({
         headers: await headers(),
-      });
+    });
     
-      if (!session) {
+    if (!session) {
         redirect("/sign-in");
-      }
+    }
     
     const queryClient = getQueryClient();
     void queryClient.prefetchQuery(trpc.agents.getMany.queryOptions({
