@@ -76,7 +76,7 @@ export const AgentIdView = ({ agentId }: Props) => {
                             <GeneratedAvatar 
                                 variant="botttsNeutral"
                                 seed={data.name}
-                                classname="size-10"
+                                className="size-10"
                             />
                             <h2 className="text-2xl font-medium">{data.name}</h2>
                         </div>
