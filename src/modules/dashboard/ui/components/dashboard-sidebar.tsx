@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BotIcon, StarIcon, VideoIcon } from "lucide-react"
+import { BotIcon, StarIcon, VideoIcon } from "lucide-react";
+
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 import { 
     Sidebar,
@@ -16,8 +18,9 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator";
+} from "@/components/ui/sidebar";
+
+import { DashboardTrial } from "./dashboard-trial";
 import { DashboardUserButton } from "./dashboard-user-button";
 
 const firstSection = [
@@ -113,6 +116,7 @@ export const DashboardSidebar = () => {
                 </SidebarGroup>
             </SidebarContent>
             <SidebarFooter className="text-white">
+                <DashboardTrial />
                 <DashboardUserButton />
             </SidebarFooter>
         </Sidebar>
